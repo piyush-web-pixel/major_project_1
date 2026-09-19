@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoInsight — Data Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div>
+                <h1>AutoInsight</h1>
+                <p>Automated Data Intelligence</p>
+            </div>
+
+        </div>
+
+        <div class="api-status">
+            <span class="pulse"></span>
+            API Online
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="page">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+                    DATA ANALYTICS PLATFORM
+                </div>
+
+                <h2>
+                    Turn raw data into
+                    <span>actionable insights.</span>
+                </h2>
+
+                <p>
+                    Upload your CSV or Excel dataset.
+                    AutoInsight automatically profiles, cleans,
+                    analyzes and visualizes your data.
+                </p>
+
+            </div>
+
+
+            <!-- ================= UPLOAD ================= -->
+
+            <div
+                class="upload-card"
+                id="uploadBox"
+            >
+
+                <div class="upload-symbol">
+                    ↑
+                </div>
+
+                <h3>
+                    Upload your dataset
+                </h3>
+
+                <p>
+                    Drag & drop your file here or browse from your computer
+                </p>
+
+                <label
+                    for="fileInput"
+                    class="browse-btn"
+                >
+                    Choose File
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".csv,.xlsx,.xls"
+                    hidden
+                >
+
+                <div
+                    id="fileName"
+                    class="selected-file"
+                >
+                    No file selected
+                </div>
+
+                <div class="file-support">
+                    CSV · XLSX · XLS
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACTION ================= -->
+
+        <section class="action-area">
+
+            <button
+                id="analyzeBtn"
+                class="analyze-btn"
+                disabled
+            >
+
+                <span>Analyze Dataset</span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                <span class="spinner"></span>
+
+                <span>
+                    AutoInsight is analyzing your dataset...
+                </span>
+
+            </div>
+
+            <div
+                id="errorBox"
+                class="error-box hidden"
+            ></div>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section
+            id="dashboard"
+            class="dashboard hidden"
+        >
+
+
+            <!-- ================= DASHBOARD HEADER ================= -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ANALYSIS COMPLETE
+                    </div>
+
+                    <h2>
+                        Dataset Overview
+                    </h2>
+
+                </div>
+
+                <div
+                    id="datasetFile"
+                    class="dataset-file"
+                ></div>
+
+            </div>
+
+
+            <!-- ================= KPI ================= -->
+
+            <div
+                id="kpiContainer"
+                class="kpi-grid"
+            ></div>
+
+
+            <!-- ================= DATA QUALITY ================= -->
+
+            <div class="section-title">
+
+                <div>
+
+                    <div class="eyebrow">
+                        DATA QUALITY
+                    </div>
+
+                    <h2>
+                        Dataset Health
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="cleaningContainer"
+                class="quality-grid"
+            ></div>
+
+
+            <!-- ================= DETECTED COLUMNS ================= -->
+
+            <section class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            AUTOMATIC PROFILING
+                        </div>
+
+                        <h2>
+                            Detected Columns
+                        </h2>
+
+                    </div>
+
+                    <span
+                        id="columnCount"
+                        class="count-badge"
+                    >
+                    </span>
+
+                </div>
+
+                <div
+                    id="columnsContainer"
+                    class="table-wrapper"
+                ></div>
+
+            </section>
+
+
+            <!-- ================= CHARTS ================= -->
+
+            <section class="charts-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            VISUAL ANALYTICS
+                        </div>
+
+                        <h2>
+                            Data Visualizations
+                        </h2>
+
+                        <p>
+                            Automatically selected visualizations
+                            based on your dataset.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="chartsContainer"
+                    class="charts-grid"
+                ></div>
+
+            </section>
+
+
+            <!-- ================= INSIGHTS ================= -->
+
+            <section class="panel insights-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            AUTOMATED DISCOVERY
+                        </div>
+
+                        <h2>
+                            Key Insights
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="insightsContainer"
+                    class="insights-grid"
+                ></div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>
+            AutoInsight
+        </span>
+
+        <span>
+            Automated Data Analysis Platform
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

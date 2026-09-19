@@ -1,0 +1,453 @@
+{
+    "dataset_overview": {
+        "rows": 76000,
+        "columns": 16,
+        "column_names": [
+            "Date",
+            "Store ID",
+            "Product ID",
+            "Category",
+            "Region",
+            "Inventory Level",
+            "Units Sold",
+            "Units Ordered",
+            "Price",
+            "Discount",
+            "Weather Condition",
+            "Promotion",
+            "Competitor Pricing",
+            "Seasonality",
+            "Epidemic",
+            "Demand"
+        ]
+    },
+    "data_quality": {
+        "duplicate_rows": 0,
+        "missing_values": {},
+        "rows_removed": 0,
+        "columns_removed": 0,
+        "outliers_detected": 25348
+    },
+    "column_summary": {
+        "numeric": [
+            "Inventory Level",
+            "Units Sold",
+            "Units Ordered",
+            "Price",
+            "Discount",
+            "Promotion",
+            "Competitor Pricing",
+            "Epidemic",
+            "Demand"
+        ],
+        "categorical": [
+            "Date",
+            "Store ID",
+            "Product ID",
+            "Category",
+            "Region",
+            "Weather Condition",
+            "Seasonality"
+        ],
+        "date": [
+            "Date"
+        ],
+        "binary": [
+            "Promotion",
+            "Epidemic"
+        ],
+        "identifier": [
+            "Store ID",
+            "Product ID"
+        ]
+    },
+    "analysis": {
+        "numeric": {
+            "Inventory Level": {
+                "count": 76000,
+                "mean": 301.0628,
+                "median": 227.0,
+                "std": 226.5102,
+                "min": 0.0,
+                "max": 2267.0,
+                "q1": 136.0,
+                "q3": 408.0
+            },
+            "Units Sold": {
+                "count": 76000,
+                "mean": 88.8273,
+                "median": 84.0,
+                "std": 43.9945,
+                "min": 0.0,
+                "max": 426.0,
+                "q1": 58.0,
+                "q3": 114.0
+            },
+            "Units Ordered": {
+                "count": 76000,
+                "mean": 89.0906,
+                "median": 0.0,
+                "std": 162.4046,
+                "min": 0.0,
+                "max": 1616.0,
+                "q1": 0.0,
+                "q3": 121.0
+            },
+            "Price": {
+                "count": 76000,
+                "mean": 67.726,
+                "median": 64.5,
+                "std": 39.3779,
+                "min": 4.74,
+                "max": 228.03,
+                "q1": 31.9975,
+                "q3": 95.83
+            },
+            "Discount": {
+                "count": 76000,
+                "mean": 9.087,
+                "median": 10.0,
+                "std": 7.4758,
+                "min": 0.0,
+                "max": 25.0,
+                "q1": 5.0,
+                "q3": 10.0
+            },
+            "Competitor Pricing": {
+                "count": 76000,
+                "mean": 69.454,
+                "median": 65.7,
+                "std": 40.9438,
+                "min": 4.29,
+                "max": 261.22,
+                "q1": 32.62,
+                "q3": 97.9325
+            },
+            "Demand": {
+                "count": 76000,
+                "mean": 104.3172,
+                "median": 100.0,
+                "std": 46.9648,
+                "min": 4.0,
+                "max": 430.0,
+                "q1": 71.0,
+                "q3": 133.0
+            }
+        },
+        "categorical": {
+            "Category": {
+                "unique_values": 5,
+                "top_value": "Groceries",
+                "top_value_count": 30400,
+                "distribution": {
+                    "Groceries": 30400,
+                    "Furniture": 13680,
+                    "Clothing": 12160,
+                    "Toys": 10640,
+                    "Electronics": 9120
+                }
+            },
+            "Region": {
+                "unique_values": 4,
+                "top_value": "North",
+                "top_value_count": 30400,
+                "distribution": {
+                    "North": 30400,
+                    "South": 15200,
+                    "East": 15200,
+                    "West": 15200
+                }
+            },
+            "Weather Condition": {
+                "unique_values": 4,
+                "top_value": "Cloudy",
+                "top_value_count": 24360,
+                "distribution": {
+                    "Cloudy": 24360,
+                    "Sunny": 22980,
+                    "Rainy": 17500,
+                    "Snowy": 11160
+                }
+            },
+            "Seasonality": {
+                "unique_values": 4,
+                "top_value": "Winter",
+                "top_value_count": 21000,
+                "distribution": {
+                    "Winter": 21000,
+                    "Spring": 18400,
+                    "Summer": 18400,
+                    "Autumn": 18200
+                }
+            }
+        },
+        "binary": {
+            "Promotion": {
+                "unique_values": 2,
+                "distribution": {
+                    "0": 51000,
+                    "1": 25000
+                }
+            },
+            "Epidemic": {
+                "unique_values": 2,
+                "distribution": {
+                    "0": 60800,
+                    "1": 15200
+                }
+            }
+        },
+        "date": {
+            "Date": {
+                "start_date": "2022-01-01",
+                "end_date": "2024-01-30",
+                "unique_dates": 760,
+                "days": 759
+            }
+        },
+        "correlations": [
+            {
+                "column_1": "Price",
+                "column_2": "Competitor Pricing",
+                "correlation": 0.9766,
+                "absolute_correlation": 0.9766
+            },
+            {
+                "column_1": "Units Sold",
+                "column_2": "Demand",
+                "correlation": 0.8334,
+                "absolute_correlation": 0.8334
+            },
+            {
+                "column_1": "Units Ordered",
+                "column_2": "Demand",
+                "correlation": 0.512,
+                "absolute_correlation": 0.512
+            },
+            {
+                "column_1": "Units Sold",
+                "column_2": "Units Ordered",
+                "correlation": 0.4339,
+                "absolute_correlation": 0.4339
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Units Sold",
+                "correlation": 0.2346,
+                "absolute_correlation": 0.2346
+            },
+            {
+                "column_1": "Discount",
+                "column_2": "Demand",
+                "correlation": 0.2247,
+                "absolute_correlation": 0.2247
+            },
+            {
+                "column_1": "Units Sold",
+                "column_2": "Discount",
+                "correlation": 0.1835,
+                "absolute_correlation": 0.1835
+            },
+            {
+                "column_1": "Units Ordered",
+                "column_2": "Discount",
+                "correlation": 0.173,
+                "absolute_correlation": 0.173
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Demand",
+                "correlation": 0.1266,
+                "absolute_correlation": 0.1266
+            },
+            {
+                "column_1": "Price",
+                "column_2": "Discount",
+                "correlation": -0.0941,
+                "absolute_correlation": 0.0941
+            },
+            {
+                "column_1": "Discount",
+                "column_2": "Competitor Pricing",
+                "correlation": -0.0921,
+                "absolute_correlation": 0.0921
+            },
+            {
+                "column_1": "Units Ordered",
+                "column_2": "Competitor Pricing",
+                "correlation": 0.0452,
+                "absolute_correlation": 0.0452
+            },
+            {
+                "column_1": "Units Ordered",
+                "column_2": "Price",
+                "correlation": 0.045,
+                "absolute_correlation": 0.045
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Price",
+                "correlation": -0.0367,
+                "absolute_correlation": 0.0367
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Competitor Pricing",
+                "correlation": -0.0348,
+                "absolute_correlation": 0.0348
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Units Ordered",
+                "correlation": -0.0347,
+                "absolute_correlation": 0.0347
+            },
+            {
+                "column_1": "Price",
+                "column_2": "Demand",
+                "correlation": -0.0235,
+                "absolute_correlation": 0.0235
+            },
+            {
+                "column_1": "Competitor Pricing",
+                "column_2": "Demand",
+                "correlation": -0.023,
+                "absolute_correlation": 0.023
+            },
+            {
+                "column_1": "Units Sold",
+                "column_2": "Price",
+                "correlation": -0.0145,
+                "absolute_correlation": 0.0145
+            },
+            {
+                "column_1": "Units Sold",
+                "column_2": "Competitor Pricing",
+                "correlation": -0.014,
+                "absolute_correlation": 0.014
+            },
+            {
+                "column_1": "Inventory Level",
+                "column_2": "Discount",
+                "correlation": -0.0007,
+                "absolute_correlation": 0.0007
+            }
+        ]
+    },
+    "chart_recommendations": [
+        {
+            "chart_type": "scatter",
+            "x": "Price",
+            "y": "Competitor Pricing",
+            "score": 97.66,
+            "correlation": 0.9766,
+            "reason": "Shows the relationship between Price and Competitor Pricing"
+        },
+        {
+            "chart_type": "line",
+            "x": "Date",
+            "y": "Price",
+            "aggregation": "mean",
+            "score": 75,
+            "reason": "Shows how Price changes over time"
+        },
+        {
+            "chart_type": "bar",
+            "x": "Category",
+            "y": "Price",
+            "aggregation": "mean",
+            "score": 75,
+            "reason": "Compares average Price across Category"
+        },
+        {
+            "chart_type": "count",
+            "x": "Category",
+            "score": 50,
+            "reason": "Shows distribution of Category"
+        },
+        {
+            "chart_type": "count",
+            "x": "Region",
+            "score": 50,
+            "reason": "Shows distribution of Region"
+        },
+        {
+            "chart_type": "count",
+            "x": "Weather Condition",
+            "score": 50,
+            "reason": "Shows distribution of Weather Condition"
+        },
+        {
+            "chart_type": "count",
+            "x": "Seasonality",
+            "score": 50,
+            "reason": "Shows distribution of Seasonality"
+        },
+        {
+            "chart_type": "scatter",
+            "x": "Units Sold",
+            "y": "Units Ordered",
+            "score": 43.39,
+            "correlation": 0.4339,
+            "reason": "Shows the relationship between Units Sold and Units Ordered"
+        },
+        {
+            "chart_type": "scatter",
+            "x": "Inventory Level",
+            "y": "Units Sold",
+            "score": 23.46,
+            "correlation": 0.2346,
+            "reason": "Shows the relationship between Inventory Level and Units Sold"
+        },
+        {
+            "chart_type": "scatter",
+            "x": "Discount",
+            "y": "Demand",
+            "score": 22.47,
+            "correlation": 0.2247,
+            "reason": "Shows the relationship between Discount and Demand"
+        }
+    ],
+    "insights": [
+        "Dataset contains 76,000 rows and 16 columns.",
+        "Dataset contains no duplicate rows.",
+        "No missing values were detected.",
+        "Average Inventory Level is 301.06, with values ranging from 0.00 to 2267.00.",
+        "Inventory Level appears to be right-skewed because its mean is noticeably higher than its median.",
+        "Average Units Sold is 88.83, with values ranging from 0.00 to 426.00.",
+        "Average Units Ordered is 89.09, with values ranging from 0.00 to 1616.00.",
+        "Units Ordered appears to be right-skewed because its mean is noticeably higher than its median.",
+        "Average Price is 67.73, with values ranging from 4.74 to 228.03.",
+        "Average Discount is 9.09, with values ranging from 0.00 to 25.00.",
+        "Average Competitor Pricing is 69.45, with values ranging from 4.29 to 261.22.",
+        "Average Demand is 104.32, with values ranging from 4.00 to 430.00.",
+        "Category contains 5 unique categories. The most frequent value is 'Groceries' with 30,400 records.",
+        "Region contains 4 unique categories. The most frequent value is 'North' with 30,400 records.",
+        "Weather Condition contains 4 unique categories. The most frequent value is 'Cloudy' with 24,360 records.",
+        "Seasonality contains 4 unique categories. The most frequent value is 'Winter' with 21,000 records.",
+        "Promotion has 2 unique values. Value '0' appears 51,000 times.",
+        "Epidemic has 2 unique values. Value '0' appears 60,800 times.",
+        "Date covers the period from 2022-01-01 to 2024-01-30 (759 days).",
+        "Price and Competitor Pricing have a very strong positive relationship (correlation: 0.9766).",
+        "Units Sold and Demand have a very strong positive relationship (correlation: 0.8334).",
+        "Units Ordered and Demand have a moderate positive relationship (correlation: 0.5120).",
+        "Units Sold and Units Ordered have a moderate positive relationship (correlation: 0.4339).",
+        "Inventory Level and Units Sold have a weak positive relationship (correlation: 0.2346).",
+        "Discount and Demand have a weak positive relationship (correlation: 0.2247).",
+        "Units Sold and Discount have a very weak positive relationship (correlation: 0.1835).",
+        "Units Ordered and Discount have a very weak positive relationship (correlation: 0.1730).",
+        "Inventory Level and Demand have a very weak positive relationship (correlation: 0.1266).",
+        "Price and Discount have a very weak negative relationship (correlation: -0.0941).",
+        "Discount and Competitor Pricing have a very weak negative relationship (correlation: -0.0921).",
+        "Units Ordered and Competitor Pricing have a very weak positive relationship (correlation: 0.0452).",
+        "Units Ordered and Price have a very weak positive relationship (correlation: 0.0450).",
+        "Inventory Level and Price have a very weak negative relationship (correlation: -0.0367).",
+        "Inventory Level and Competitor Pricing have a very weak negative relationship (correlation: -0.0348).",
+        "Inventory Level and Units Ordered have a very weak negative relationship (correlation: -0.0347).",
+        "Price and Demand have a very weak negative relationship (correlation: -0.0235).",
+        "Competitor Pricing and Demand have a very weak negative relationship (correlation: -0.0230).",
+        "Units Sold and Price have a very weak negative relationship (correlation: -0.0145).",
+        "Units Sold and Competitor Pricing have a very weak negative relationship (correlation: -0.0140).",
+        "Inventory Level and Discount have a very weak negative relationship (correlation: -0.0007)."
+    ]
+}

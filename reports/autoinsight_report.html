@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AutoInsight Report</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f5f7fa;
+    color: #222;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 35px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 150px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AutoInsight Report</h1>
+
+<p>Automated Dataset Analysis Report</p>
+
+
+<h2>Dataset Overview</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Rows</h3>
+<p>76,000</p>
+</div>
+
+<div class="card">
+<h3>Columns</h3>
+<p>16</p>
+</div>
+
+<div class="card">
+<h3>Duplicates</h3>
+<p>0</p>
+</div>
+
+<div class="card">
+<h3>Outliers</h3>
+<p>25,348</p>
+</div>
+
+</div>
+
+
+<h2>Column Summary</h2>
+
+<div class="section">
+
+<p>
+<b>Numeric:</b>
+9
+</p>
+
+<p>
+<b>Categorical:</b>
+7
+</p>
+
+<p>
+<b>Binary:</b>
+2
+</p>
+
+<p>
+<b>Date:</b>
+1
+</p>
+
+<p>
+<b>Identifier:</b>
+2
+</p>
+
+</div>
+
+
+<h2>Insights</h2>
+
+<div class="section">
+
+<ul>
+<li>Dataset contains 76,000 rows and 16 columns.</li>
+<li>Dataset contains no duplicate rows.</li>
+<li>No missing values were detected.</li>
+<li>Average Inventory Level is 301.06, with values ranging from 0.00 to 2267.00.</li>
+<li>Inventory Level appears to be right-skewed because its mean is noticeably higher than its median.</li>
+<li>Average Units Sold is 88.83, with values ranging from 0.00 to 426.00.</li>
+<li>Average Units Ordered is 89.09, with values ranging from 0.00 to 1616.00.</li>
+<li>Units Ordered appears to be right-skewed because its mean is noticeably higher than its median.</li>
+<li>Average Price is 67.73, with values ranging from 4.74 to 228.03.</li>
+<li>Average Discount is 9.09, with values ranging from 0.00 to 25.00.</li>
+<li>Average Competitor Pricing is 69.45, with values ranging from 4.29 to 261.22.</li>
+<li>Average Demand is 104.32, with values ranging from 4.00 to 430.00.</li>
+<li>Category contains 5 unique categories. The most frequent value is 'Groceries' with 30,400 records.</li>
+<li>Region contains 4 unique categories. The most frequent value is 'North' with 30,400 records.</li>
+<li>Weather Condition contains 4 unique categories. The most frequent value is 'Cloudy' with 24,360 records.</li>
+<li>Seasonality contains 4 unique categories. The most frequent value is 'Winter' with 21,000 records.</li>
+<li>Promotion has 2 unique values. Value '0' appears 51,000 times.</li>
+<li>Epidemic has 2 unique values. Value '0' appears 60,800 times.</li>
+<li>Date covers the period from 2022-01-01 to 2024-01-30 (759 days).</li>
+<li>Price and Competitor Pricing have a very strong positive relationship (correlation: 0.9766).</li>
+<li>Units Sold and Demand have a very strong positive relationship (correlation: 0.8334).</li>
+<li>Units Ordered and Demand have a moderate positive relationship (correlation: 0.5120).</li>
+<li>Units Sold and Units Ordered have a moderate positive relationship (correlation: 0.4339).</li>
+<li>Inventory Level and Units Sold have a weak positive relationship (correlation: 0.2346).</li>
+<li>Discount and Demand have a weak positive relationship (correlation: 0.2247).</li>
+<li>Units Sold and Discount have a very weak positive relationship (correlation: 0.1835).</li>
+<li>Units Ordered and Discount have a very weak positive relationship (correlation: 0.1730).</li>
+<li>Inventory Level and Demand have a very weak positive relationship (correlation: 0.1266).</li>
+<li>Price and Discount have a very weak negative relationship (correlation: -0.0941).</li>
+<li>Discount and Competitor Pricing have a very weak negative relationship (correlation: -0.0921).</li>
+<li>Units Ordered and Competitor Pricing have a very weak positive relationship (correlation: 0.0452).</li>
+<li>Units Ordered and Price have a very weak positive relationship (correlation: 0.0450).</li>
+<li>Inventory Level and Price have a very weak negative relationship (correlation: -0.0367).</li>
+<li>Inventory Level and Competitor Pricing have a very weak negative relationship (correlation: -0.0348).</li>
+<li>Inventory Level and Units Ordered have a very weak negative relationship (correlation: -0.0347).</li>
+<li>Price and Demand have a very weak negative relationship (correlation: -0.0235).</li>
+<li>Competitor Pricing and Demand have a very weak negative relationship (correlation: -0.0230).</li>
+<li>Units Sold and Price have a very weak negative relationship (correlation: -0.0145).</li>
+<li>Units Sold and Competitor Pricing have a very weak negative relationship (correlation: -0.0140).</li>
+<li>Inventory Level and Discount have a very weak negative relationship (correlation: -0.0007).</li>
+
+</ul>
+
+</div>
+
+
+<h2>Recommended Charts</h2>
+
+<div class="section">
+
+<table>
+
+<tr>
+<th>#</th>
+<th>Chart</th>
+<th>X</th>
+<th>Y</th>
+<th>Score</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>scatter</td>
+<td>Price</td>
+<td>Competitor Pricing</td>
+<td>97.66</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>line</td>
+<td>Date</td>
+<td>Price</td>
+<td>75</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>bar</td>
+<td>Category</td>
+<td>Price</td>
+<td>75</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>count</td>
+<td>Category</td>
+<td>-</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>count</td>
+<td>Region</td>
+<td>-</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>count</td>
+<td>Weather Condition</td>
+<td>-</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>count</td>
+<td>Seasonality</td>
+<td>-</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>scatter</td>
+<td>Units Sold</td>
+<td>Units Ordered</td>
+<td>43.39</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>scatter</td>
+<td>Inventory Level</td>
+<td>Units Sold</td>
+<td>23.46</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>scatter</td>
+<td>Discount</td>
+<td>Demand</td>
+<td>22.47</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+
+</html>
