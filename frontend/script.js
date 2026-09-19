@@ -3,8 +3,6 @@ const API_URL =
     window.location.hostname === "127.0.0.1"
         ? "http://127.0.0.1:8000/api/analyze/"
         : "https://major-project-1-1-diwh.onrender.com/api/analyze/";
-
-
 // =====================================================
 // ELEMENTS
 // =====================================================
