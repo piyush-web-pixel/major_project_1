@@ -183,8 +183,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
     "http://localhost:5500",
+    "https://major-project-1-2-ok7u.onrender.com",
 ]
-
 
 # =========================================================
 # FILE UPLOAD LIMITS
